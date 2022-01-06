@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>154b400f-fa74-48c5-b5dd-291eefa69eda</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\net5.0\impacta.bootcamp.project.doe.doacoes.api.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="Swashbuckle.AspNetCore.SwaggerUI" />
+    <None Remove="Models\" />
+    <None Remove="Models\Doacoes\" />
+    <None Remove="Models\Errors\" />
+    <None Remove="Helpers\" />
+    <None Remove="Endpoints\" />
+    <None Remove="Endpoints\Doacoes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.2.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\Doacoes\" />
+    <Folder Include="Models\Errors\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Endpoints\" />
+    <Folder Include="Endpoints\Doacoes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\impacta.bootcamp.project.doe.doacoes.core\impacta.bootcamp.project.doe.doacoes.core.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\impacta.bootcamp.project.doe.doacoes.infra.data\impacta.bootcamp.project.doe.doacoes.infra.data.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\impacta.bootcamp.project.doe.doacoes.ioc\impacta.bootcamp.project.doe.doacoes.ioc.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

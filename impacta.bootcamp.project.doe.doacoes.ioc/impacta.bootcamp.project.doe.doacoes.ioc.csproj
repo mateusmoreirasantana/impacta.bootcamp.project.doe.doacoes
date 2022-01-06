@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\impacta.bootcamp.project.doe.doacoes.application\impacta.bootcamp.project.doe.doacoes.application.csproj" />
+    <ProjectReference Include="..\impacta.bootcamp.project.doe.doacoes.core\impacta.bootcamp.project.doe.doacoes.core.csproj" />
+    <ProjectReference Include="..\impacta.bootcamp.project.doe.doacoes.infra.data\impacta.bootcamp.project.doe.doacoes.infra.data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+</Project>
